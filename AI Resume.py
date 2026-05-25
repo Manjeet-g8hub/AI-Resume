@@ -1,8 +1,8 @@
 import streamlit as st
 
-import google.generativeai as genai
+import google.genai as genai
 
-genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
+genai.client(api_key=st.secrets["GEMINI_API_KEY"])
 model = genai.GenerativeModel('gemini-2.5-flash')
 
 #1. AI Cover Letter Generator
