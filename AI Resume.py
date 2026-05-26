@@ -6,7 +6,7 @@ google_api_key = st.secrets["google"]["api_key"]
 
 client = genai.Client(api_key = google_api_key)
 
-# model = genai.GenerativeModel('gemini-2.5-flash')
+model = genai.GenerativeModel('gemini-2.5-flash')
 
 # genai.configure(api_key=google_api_key)
 
