@@ -6,7 +6,7 @@ google_api_key = st.secrets["google"]["api_key"]
 
 client = genai.Client(api_key = google_api_key)
 
-model = genai.Genai('gemini-2.5-flash')
+# model = genai.Generativeai('gemini-2.5-flash')
 
 # genai.configure(api_key=google_api_key)
 
@@ -31,5 +31,5 @@ if st.button("Generate Cover Letter"):
     prompt = f"Write a cover letter for {Job_title} using these resume points: {summary}"
     response = client.models.generate_content(
         model = "gemini-2.5-flash",
-        content = prompt)
+        contents = prompt)
     st.write(response.text)
